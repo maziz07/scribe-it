@@ -9,9 +9,10 @@ export default function HomePage() {
       <h3 className='font-medium md:text-lg'>Record <span className='text-blue-400'>&rarr;
         </span> Transcribe <span className='text-blue-400'>&rarr;
         </span> Translate</h3>  
-        <button className='flex items-center text-base justify-between
+        <button className='flex specialBtn px-4 py-2 rounded-xl items-center
+         text-base justify-between
         gap-4 mx-auto w-72 max-w-full my-4'>
-            <p>Record</p>
+            <p className='text-blue-400'>Record</p>
             <i className="fa-solid fa-microphone"></i>
         </button>
         <p className='text-base'>Or <label className='text-blue-400 cursor pointer
