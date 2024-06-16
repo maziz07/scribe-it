@@ -10,9 +10,10 @@ function App() {
 
   const isAudioAvailable = file || audioStream
 
-  function handleAudioReset()
+  function handleAudioReset(){
     setFile(null)
     setAudioStream(null)
+  }
 
   return (
    <div className='flex flex-col max-w-[1000p] mx-auto w-full'>
