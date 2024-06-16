@@ -1,6 +1,10 @@
 import React from 'react'
 
-export default function HomePage() {
+export default function HomePage(props) {
+  const { setAudioStream, setFile } = props
+
+
+
   return (
     <main className='flex-1 p-4 flex flex-col gap-3 text-center sm:gap-4 md:gap-5 
     justify-center pb-10'>
@@ -16,7 +20,11 @@ export default function HomePage() {
             <i className="fa-solid fa-microphone"></i>
         </button>
         <p className='text-base'>Or <label className='text-blue-400 cursor pointer
-        hover:text-blue-600 duration-200'>upload <input 
+        hover:text-blue-600 duration-200'>upload 
+        <input onChange={(e) => {
+          const tempFile = e.target.files[0]
+          setFile(tempFile)
+        }} 
         className='hidden' type='file' accept='.mp3,.wave'/>
         </label> a mp3 file</p>
         <p className='italic text-slate-500'>Free now Free forever</p>
