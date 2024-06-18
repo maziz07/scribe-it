@@ -17,7 +17,7 @@ export default function HomePage(props) {
     console.log('Start Recording')
 
     try {
-        const streamData = navigator.mediaDevices.getUserMedia({
+        const streamData = await navigator.mediaDevices.getUserMedia({
           audio: true,
           video: false
         })
@@ -67,7 +67,7 @@ export default function HomePage(props) {
   })
 
   return (
-    <main className='flex-1 p-4 flex flex-col gap-3 text-center sm:gap-4 md:gap-5 
+    <main className='flex-1 p-4 flex flex-col gap-3 text-center sm:gap-4
     justify-center pb-10'>
       <h1 className='font-semibold text-5xl sm:text-6xl md:text-7xl'>
         Scribe<span className='text-blue-400 bold'>It</span></h1>
