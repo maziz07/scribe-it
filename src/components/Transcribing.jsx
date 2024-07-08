@@ -5,8 +5,8 @@ export default function Transcribing(props) {
 
 
   return (
-    <div className='flex items-center flex-col
-    justify-center gap-10 md:gap-14 py-24 '>
+    <div className='flex items-center flex-1 flex-col
+    justify-center gap-10 md:gap-14 text-center pb-24 p-4 '>
       <div className='flex flex-col gap-2 sm:gap-4'>
       <h1 className='font-semibold text-4xl sm:text-5xl md:text-6xl'>
       <span className='text-blue-400 bold'>
@@ -14,7 +14,7 @@ export default function Transcribing(props) {
         <p>{!downloading ? 'warming up cylinders'
         : 'core cylinders engaged'}</p>
       </div>
-      <div className='flex flex-col gap 2 sm:gap-4 mx-auto w-full'>
+      <div className='flex flex-col gap 2 sm:gap-4 max-w-[400px] mx-auto w-full'>
           {[0, 1, 2].map(val => {
             return (
               <div key={val} className=
