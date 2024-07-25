@@ -9,8 +9,8 @@ import Transcribing from './components/Transcribing'
 function App() {
   const [file, setFile] = useState(null)
   const [audioStream, setAudioStream] = useState(null)
-  const [output, setOutput] = useState(true)
-  const [loading, setLoading] = useState(true)
+  const [output, setOutput] = useState(null)
+  const [loading, setLoading] = useState(false)
 
   const isAudioAvailable = file || audioStream
 
@@ -19,9 +19,7 @@ function App() {
     setAudioStream(null)
   }
 
-  useEffect(() => {
-    console.log(audioStream)
-  }, [audioStream])
+ 
 
   return (
    <div className='flex flex-col max-w-[1000p] mx-auto w-full'>
@@ -39,9 +37,7 @@ function App() {
       <HomePage setFile={setFile} setAudioStream={setAudioStream} />
       )}
     </section>
-      <h1 className='text-green-400'>
-      Hello
-    </h1>
+      <footer></footer>
    </div>
   )
 }

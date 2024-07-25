@@ -20,6 +20,9 @@ export default function Information() {
            (tab === 'transcription' ? ' bg-blue-400 text-white'
              : ' text-blue-400 hover:text-blue-600 ')}>Translation</button>
         </div>
+        {tab === 'transcription' ? (
+          <Transcription />
+        ) :}
     </main>
   )
 }
