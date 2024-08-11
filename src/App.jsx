@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import HomePage from './components/HomePage'
 import Header from './components/Header'
 import FileDisplay from './components/FileDisplay'
@@ -11,6 +11,7 @@ function App() {
   const [audioStream, setAudioStream] = useState(null)
   const [output, setOutput] = useState(null)
   const [loading, setLoading] = useState(false)
+  const [finished, setFinished] = useState(false)
 
   const isAudioAvailable = file || audioStream
 
@@ -18,6 +19,11 @@ function App() {
     setFile(null)
     setAudioStream(null)
   }
+
+  const worker = useRef(null)
+  useEffect(() => {
+
+  }, )
 
  
 
