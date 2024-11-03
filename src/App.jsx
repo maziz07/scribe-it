@@ -22,6 +22,9 @@ function App() {
 
   const worker = useRef(null)
   useEffect(() => {
+    if (!worker.current) {
+      worker.current = new Worker(new URL('./'))
+    }
 
   }, )
 

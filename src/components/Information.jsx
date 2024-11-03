@@ -22,7 +22,9 @@ export default function Information() {
         </div>
         {tab === 'transcription' ? (
           <Transcription />
-        ) :}
+        ) : (
+          <Translation />
+        )}
     </main>
   )
 }
